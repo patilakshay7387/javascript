@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+            function chk(){
+        
+                var name=document.getElementById("nm").value
+                console.log(name);
+        
+        
+                if (name=='') {
+        
+                document.getElementById("snm").innerHTML="Enter Name "
+                document.getElementById("snm").style.color="red"
+        
+                return false;
+        
+        
+        
+                    }
+                    else if(!name.match(/^[a-zA-Z]+$/))
+                {
+        
+                            document.getElementById("snm").innerHTML="Enter text only"
+                            document.getElementById("snm").style.color="red"
+        
+                return false;
+        
+        }
+        
+                        else if(name.length<=8)
+                        {
+        
+                            document.getElementById("snm").innerHTML="Name should be more  than 8 char "
+                            document.getElementById("snm").style.color="red"
+        
+                return false
+        
+                    
+                }
+           
+        
+             
+        return true
+        
+            }
+        
+        
+            
+            
+            
+            </script>
+        
+</head>
+<body>
+   
+
+<form action="Loop.html" method="post">
+
+
+Enter Name<input type="text" id="nm">
+<input type="submit" value="Display" onclick="return chk()">
+<br>
+<span id="snm"></span>
+
+</form>
+</body>
+</html>
